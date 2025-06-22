@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scripts\component\button.cpp" />
+    <ClCompile Include="scripts\component\collider.cpp" />
+    <ClCompile Include="scripts\component\model.cpp" />
+    <ClCompile Include="scripts\component\sprite.cpp" />
+    <ClCompile Include="scripts\component\transform.cpp" />
+    <ClCompile Include="scripts\core\core.cpp" />
+    <ClCompile Include="scripts\core\direct3d.cpp" />
+    <ClCompile Include="scripts\core\main.cpp" />
+    <ClCompile Include="scripts\object\enemy.cpp" />
+    <ClCompile Include="scripts\object\floor.cpp" />
+    <ClCompile Include="scripts\object\player.cpp" />
+    <ClCompile Include="scripts\object\playerpart.cpp" />
+    <ClCompile Include="scripts\scene\ingame.cpp" />
+    <ClCompile Include="scripts\scene\title.cpp" />
+    <ClCompile Include="scripts\shader\textureshader.cpp" />
+    <ClCompile Include="scripts\system\camera.cpp" />
+    <ClCompile Include="scripts\system\component.cpp" />
+    <ClCompile Include="scripts\system\gameobject.cpp" />
+    <ClCompile Include="scripts\system\input.cpp" />
+    <ClCompile Include="scripts\system\mesh.cpp" />
+    <ClCompile Include="scripts\system\meshmanager.cpp" />
+    <ClCompile Include="scripts\system\random.cpp" />
+    <ClCompile Include="scripts\system\rendermanager.cpp" />
+    <ClCompile Include="scripts\system\scene.cpp" />
+    <ClCompile Include="scripts\system\scenemanager.cpp" />
+    <ClCompile Include="scripts\system\texture.cpp" />
+    <ClCompile Include="scripts\system\texturemanager.cpp" />
+    <ClCompile Include="scripts\system\time.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="scripts\component\button.h" />
+    <ClInclude Include="scripts\component\collider.h" />
+    <ClInclude Include="scripts\component\model.h" />
+    <ClInclude Include="scripts\component\sprite.h" />
+    <ClInclude Include="scripts\component\transform.h" />
+    <ClInclude Include="scripts\core\core.h" />
+    <ClInclude Include="scripts\core\direct3d.h" />
+    <ClInclude Include="scripts\object\enemy.h" />
+    <ClInclude Include="scripts\object\floor.h" />
+    <ClInclude Include="scripts\object\player.h" />
+    <ClInclude Include="scripts\object\playerpart.h" />
+    <ClInclude Include="scripts\scene\ingame.h" />
+    <ClInclude Include="scripts\scene\title.h" />
+    <ClInclude Include="scripts\shader\textureshader.h" />
+    <ClInclude Include="scripts\system\camera.h" />
+    <ClInclude Include="scripts\system\component.h" />
+    <ClInclude Include="scripts\system\gameobject.h" />
+    <ClInclude Include="scripts\system\input.h" />
+    <ClInclude Include="scripts\system\mesh.h" />
+    <ClInclude Include="scripts\system\meshmanager.h" />
+    <ClInclude Include="scripts\system\random.h" />
+    <ClInclude Include="scripts\system\rendermanager.h" />
+    <ClInclude Include="scripts\system\scene.h" />
+    <ClInclude Include="scripts\system\scenemanager.h" />
+    <ClInclude Include="scripts\system\texture.h" />
+    <ClInclude Include="scripts\system\texturemanager.h" />
+    <ClInclude Include="scripts\system\time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\shader\texture.ps" />
+    <None Include="scripts\shader\texture.vs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\background.tga" />
+    <Image Include="data\empty.tga" />
+    <Image Include="data\floor.tga" />
+    <Image Include="data\health.tga" />
+    <Image Include="data\healthbar.tga" />
+    <Image Include="data\healthbarbackground.tga" />
+    <Image Include="data\interval.tga" />
+    <Image Include="data\speed.tga" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2c97fadb-caf5-4522-9f6b-330e2b6ff7b8}</ProjectGuid>
+    <RootNamespace>SideHero</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

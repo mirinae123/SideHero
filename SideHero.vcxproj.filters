@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="scripts">
+      <UniqueIdentifier>{32f88ffc-3675-4236-95a3-6c91cfd2fdce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\core">
+      <UniqueIdentifier>{29463a8b-923b-44c8-9967-5c4d3772ad0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\system">
+      <UniqueIdentifier>{e4bb6b5f-c95a-4053-81ec-32c5272cd883}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\shader">
+      <UniqueIdentifier>{d7e0767a-630f-4ccb-9ee9-0de44cd3c087}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\component">
+      <UniqueIdentifier>{622ad372-04bc-4e5c-b767-79ad11b683e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{f0e7def9-cc1a-41e2-b8b0-f9545b88b402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\object">
+      <UniqueIdentifier>{1d5b4497-55a5-46c9-836e-957118f1131f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripts\scene">
+      <UniqueIdentifier>{4e96a789-53ae-49a5-9b2f-eefd883a57c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="scripts\core\main.cpp">
+      <Filter>scripts\core</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\core\core.cpp">
+      <Filter>scripts\core</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\input.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\time.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\core\direct3d.cpp">
+      <Filter>scripts\core</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\gameobject.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\component.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\scene.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\scenemanager.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\camera.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\rendermanager.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\component\sprite.cpp">
+      <Filter>scripts\component</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\component\transform.cpp">
+      <Filter>scripts\component</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\component\collider.cpp">
+      <Filter>scripts\component</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\component\model.cpp">
+      <Filter>scripts\component</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\shader\textureshader.cpp">
+      <Filter>scripts\shader</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\texture.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\mesh.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\object\floor.cpp">
+      <Filter>scripts\object</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\object\player.cpp">
+      <Filter>scripts\object</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\meshmanager.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\texturemanager.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\object\playerpart.cpp">
+      <Filter>scripts\object</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\scene\ingame.cpp">
+      <Filter>scripts\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\scene\title.cpp">
+      <Filter>scripts\scene</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\component\button.cpp">
+      <Filter>scripts\component</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\system\random.cpp">
+      <Filter>scripts\system</Filter>
+    </ClCompile>
+    <ClCompile Include="scripts\object\enemy.cpp">
+      <Filter>scripts\object</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="scripts\core\core.h">
+      <Filter>scripts\core</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\input.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\time.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\core\direct3d.h">
+      <Filter>scripts\core</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\gameobject.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\component.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\scene.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\scenemanager.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\camera.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\rendermanager.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\component\sprite.h">
+      <Filter>scripts\component</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\component\transform.h">
+      <Filter>scripts\component</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\component\collider.h">
+      <Filter>scripts\component</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\component\model.h">
+      <Filter>scripts\component</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\shader\textureshader.h">
+      <Filter>scripts\shader</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\texture.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\mesh.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\object\floor.h">
+      <Filter>scripts\object</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\object\player.h">
+      <Filter>scripts\object</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\meshmanager.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\texturemanager.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\object\playerpart.h">
+      <Filter>scripts\object</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\scene\ingame.h">
+      <Filter>scripts\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\scene\title.h">
+      <Filter>scripts\scene</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\component\button.h">
+      <Filter>scripts\component</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\system\random.h">
+      <Filter>scripts\system</Filter>
+    </ClInclude>
+    <ClInclude Include="scripts\object\enemy.h">
+      <Filter>scripts\object</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scripts\shader\texture.vs">
+      <Filter>scripts\shader</Filter>
+    </None>
+    <None Include="scripts\shader\texture.ps">
+      <Filter>scripts\shader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\floor.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\background.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\empty.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\healthbarbackground.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\health.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\speed.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\interval.tga">
+      <Filter>data</Filter>
+    </Image>
+    <Image Include="data\healthbar.tga">
+      <Filter>data</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
