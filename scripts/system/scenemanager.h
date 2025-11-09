@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include <vector>
+#include <unordered_map>
 
 #include "scene.h"
 #include "mesh.h"
@@ -11,12 +11,12 @@
 #include "../component/transform.h"
 
 /// <summary>
-/// ¾À Á¾·ù
+/// ì”¬ ì¢…ë¥˜
 /// </summary>
 enum SceneType { TitleScene, InGameScene };
 
 /// <summary>
-/// ¾ÀµéÀ» °ü¸®ÇÏ´Â Å¬·¡½º
+/// ì”¬ë“¤ì„ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤
 /// </summary>
 class SceneManager {
 private:
@@ -27,20 +27,20 @@ private:
 
 public:
 	/// <summary>
-	/// ¾ÀÀ» º¯°æÇÑ´Ù.
+	/// ì”¬ì„ ë³€ê²½í•œë‹¤.
 	/// </summary>
-	/// <param name="">º¯°æÇÒ ¾À</param>
-	static void ChangeScene(int);
+	/// <param name="">ë³€ê²½í•  ì”¬</param>
+	static void ChangeScene(SceneType);
 
 	/// <summary>
-	/// ÇöÀç ¾ÀÀ» ¹İÈ¯ÇÑ´Ù.
+	/// í˜„ì¬ ì”¬ì„ ë°˜í™˜í•œë‹¤.
 	/// </summary>
-	/// <returns>¾À¿¡ ´ëÇÑ Raw Pointer</returns>
+	/// <returns>ì”¬ì— ëŒ€í•œ Raw Pointer</returns>
 	static Scene* GetCurrentScene();
 
 private:
-	static vector<unique_ptr<Scene>> m_scenes;
-	static int m_currentScene;
+	static unordered_map<SceneType, unique_ptr<Scene>> m_scenes;
+	static SceneType m_currentScene;
 
 friend class Core;
 };

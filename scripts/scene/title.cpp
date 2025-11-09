@@ -36,7 +36,7 @@ void Title::Frame() {
 
 	// 시작 버튼 클릭
 	if (m_startButton->GetClick()) {
-		SceneManager::ChangeScene(1);
+		SceneManager::ChangeScene(SceneType::InGameScene);
 	}
 
 	// 종료 버튼 클릭

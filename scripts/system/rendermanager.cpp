@@ -12,7 +12,7 @@ bool RenderManager::Render() {
 
 	Direct3D::EnableAlphaBlending();
 
-	// Model ÄÄÆ÷³ÍÆ® ·»´õ¸µ
+	// Model ì»´í¬ë„ŒíŠ¸ ë Œë”ë§
 	for (auto v : m_models) {
 		Direct3D::ClearZBuffer();
 
@@ -23,12 +23,8 @@ bool RenderManager::Render() {
 
 	Direct3D::TurnZBufferOff();
 
-	// Sprite ÄÄÆ÷³ÍÆ® ·»´õ¸µ
+	// Sprite ì»´í¬ë„ŒíŠ¸ ë Œë”ë§
 	for (auto v : m_sprites) {
-		if (Input::GetKeyDown(KeyCode::W)) {
-			v.second.size();
-		}
-
 		for (auto c : v.second) {
 			c->Render();
 		}

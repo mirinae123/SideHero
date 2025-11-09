@@ -5,17 +5,17 @@
 #include "../scene/title.h"
 #include "../scene/ingame.h"
 
-vector<unique_ptr<Scene>> SceneManager::m_scenes;
-int SceneManager::m_currentScene = -1;
+unordered_map<SceneType, unique_ptr<Scene>> SceneManager::m_scenes;
+SceneType SceneManager::m_currentScene;
 
 void SceneManager::Start() {
-	m_currentScene = 0;
+	m_currentScene = SceneType::TitleScene;
 
 	unique_ptr<Title> title = make_unique<Title>("Title");
-	m_scenes.push_back(move(title));
+	m_scenes[SceneType::TitleScene] = move(title);
 
 	unique_ptr<InGame> inGame = make_unique<InGame>("InGame");
-	m_scenes.push_back(move(inGame));
+	m_scenes[SceneType::InGameScene] = move(inGame);
 
 	m_scenes[m_currentScene]->Start();
 }
@@ -34,7 +34,7 @@ void SceneManager::End() {
 	}
 }
 
-void SceneManager::ChangeScene(int newScene) {
+void SceneManager::ChangeScene(SceneType newScene) {
 	Input::StartCooldown();
 
 	m_scenes[m_currentScene]->End();

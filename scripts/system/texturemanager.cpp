@@ -1,6 +1,6 @@
 #include "texturemanager.h"
 
-map<TextureType, unique_ptr<Texture>> TextureManager::m_textures;
+unordered_map<TextureType, unique_ptr<Texture>> TextureManager::m_textures;
 
 void TextureManager::Start() {
 	m_textures[TextureType::PlayerTexture] = make_unique<Texture>("data\\empty.tga");

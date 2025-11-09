@@ -1,19 +1,19 @@
 #pragma once
 
-#include "memory"
-#include "map"
+#include <memory>
+#include <unordered_map>
 
 #include "../system/texture.h"
 
 using namespace std;
 
 /// <summary>
-/// ÅØ½ºÃ³ Á¾·ù
+/// í…ìŠ¤ì²˜ ì¢…ë¥˜
 /// </summary>
 enum TextureType { PlayerTexture, FloorTexture, BackgroundTexture, HealthBarTexture, HealthBarBackgroundTexture, HealthTexture, SpeedTexture, IntervalTexture };
 
 /// <summary>
-/// ÅØ½ºÃ³µéÀ» °ü¸®ÇÏ´Â Å¬·¡½º
+/// í…ìŠ¤ì²˜ë“¤ì„ ê´€ë¦¬í•˜ëŠ” í´ë˜ìŠ¤
 /// </summary>
 class TextureManager {
 public:
@@ -21,5 +21,5 @@ public:
 	static Texture* GetTexture(TextureType);
 
 private:
-	static map<TextureType, unique_ptr<Texture>> m_textures;
+	static unordered_map<TextureType, unique_ptr<Texture>> m_textures;
 };

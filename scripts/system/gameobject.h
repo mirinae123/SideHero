@@ -1,6 +1,6 @@
 #pragma once
 
-#include <set>
+#include <list>
 #include <memory>
 #include <string>
 #include <vector>
@@ -13,7 +13,7 @@ using namespace std;
 class Component;
 
 /// <summary>
-/// °ÔÀÓ ¿ÀºêÁ§Æ® Å¬·¡½º
+/// ê²Œì„ ì˜¤ë¸Œì íŠ¸ í´ë˜ìŠ¤
 /// </summary>
 class GameObject : public enable_shared_from_this<GameObject> {
 public:
@@ -31,15 +31,15 @@ public:
 	virtual void End();
 
 	/// <summary>
-	/// ÇÊ¿äÇÑ ÃÊ±âÈ­ °úÁ¤À» ¼öÇàÇÑ´Ù.
+	/// í•„ìš”í•œ ì´ˆê¸°í™” ê³¼ì •ì„ ìˆ˜í–‰í•œë‹¤.
 	/// </summary>
 	virtual void Initialize(...);
 
 	/// <summary>
-	/// °ÔÀÓ ¿ÀºêÁ§Æ®¿¡ Æ÷ÇÔµÈ ÄÄÆ÷³ÍÆ®¸¦ ¹İÈ¯ÇÑ´Ù.
+	/// ê²Œì„ ì˜¤ë¸Œì íŠ¸ì— í¬í•¨ëœ ì»´í¬ë„ŒíŠ¸ë¥¼ ë°˜í™˜í•œë‹¤.
 	/// </summary>
-	/// <typeparam name="T">ÄÄÆ÷³ÍÆ® Å¸ÀÔ</typeparam>
-	/// <returns>ÄÄÆ÷³ÍÆ®¿¡ ´ëÇÑ Raw Pointer</returns>
+	/// <typeparam name="T">ì»´í¬ë„ŒíŠ¸ íƒ€ì…</typeparam>
+	/// <returns>ì»´í¬ë„ŒíŠ¸ì— ëŒ€í•œ Raw Pointer</returns>
 	template<typename T>
 	T* GetComponent() {
 		T* retPointer;
@@ -54,20 +54,20 @@ public:
 	}
 
 	/// <summary>
-	/// ÇöÀç °ÔÀÓ ¿ÀºêÁ§Æ®¿¡ ÄÄÆ÷³ÍÆ®¸¦ »ğÀÔÇÑ´Ù.
+	/// í˜„ì¬ ê²Œì„ ì˜¤ë¸Œì íŠ¸ì— ì»´í¬ë„ŒíŠ¸ë¥¼ ì‚½ì…í•œë‹¤.
 	/// </summary>
-	/// <param name="">ÄÄÆ÷³ÍÆ®¿¡ ´ëÇÑ Unique Pointer</param>
+	/// <param name="">ì»´í¬ë„ŒíŠ¸ì— ëŒ€í•œ Unique Pointer</param>
 	void InsertComponent(unique_ptr<Component>);
 
 	/// <summary>
-	/// ÇöÀç °ÔÀÓ ¿ÀºêÁ§Æ®¿¡¼­ ÄÄÆ÷³ÍÆ®¸¦ Á¦°ÅÇÑ´Ù.
+	/// í˜„ì¬ ê²Œì„ ì˜¤ë¸Œì íŠ¸ì—ì„œ ì»´í¬ë„ŒíŠ¸ë¥¼ ì œê±°í•œë‹¤.
 	/// </summary>
-	/// <param name="">ÄÄÆ÷³ÍÆ®¿¡ ´ëÇÑ Raw Pointer</param>
+	/// <param name="">ì»´í¬ë„ŒíŠ¸ì— ëŒ€í•œ Raw Pointer</param>
 	void EraseComponent(Component*);
 
 	/// <summary>
-	/// ÇöÀç °ÔÀÓ ¿ÀºêÁ§Æ®ÀÇ Á¦°Å ÇÃ·¡±×¸¦ ¼³Á¤ÇÑ´Ù.
-	/// Á¦°Å Ã³¸®´Â ¾À¿¡¼­ º°µµ·Î ÁøÇàÇÑ´Ù.
+	/// í˜„ì¬ ê²Œì„ ì˜¤ë¸Œì íŠ¸ì˜ ì œê±° í”Œë˜ê·¸ë¥¼ ì„¤ì •í•œë‹¤.
+	/// ì œê±° ì²˜ë¦¬ëŠ” ì”¬ì—ì„œ ë³„ë„ë¡œ ì§„í–‰í•œë‹¤.
 	/// </summary>
 	void Destroy();
 	bool IsDestroyed();
@@ -78,5 +78,5 @@ protected:
 	bool m_isActive;
 	bool m_isDestroyed = false;
 
-	set<unique_ptr<Component>> m_components;
+	list<unique_ptr<Component>> m_components;
 };

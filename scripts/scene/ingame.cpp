@@ -177,7 +177,7 @@ void InGame::Frame() {
 		}
 		
 		if (m_quitButton->GetClick()) {
-			SceneManager::ChangeScene(0);
+			SceneManager::ChangeScene(SceneType::TitleScene);
 		}
 	}
 	// 게임이 진행 중인 경우
@@ -327,7 +327,7 @@ void InGame::Frame() {
 	// 게임 오버된 경우
 	else {
 		if (m_quitButton->GetClick()) {
-			SceneManager::ChangeScene(0);
+			SceneManager::ChangeScene(SceneType::TitleScene);
 		}
 	}
 }

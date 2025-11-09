@@ -115,7 +115,7 @@ void Player::Frame() {
 	}
 
 	// 플랫폼 충돌 판정
-	set<unique_ptr<GameObject>>& gameObjects = SceneManager::GetCurrentScene()->GetGameObjects();
+	list<unique_ptr<GameObject>>& gameObjects = SceneManager::GetCurrentScene()->GetGameObjects();
 	m_isGrounded = false;
 
 	for (const unique_ptr<GameObject>& gameObject : gameObjects) {

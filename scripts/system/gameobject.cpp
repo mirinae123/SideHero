@@ -55,7 +55,7 @@ void GameObject::Initialize(...) {
 
 void GameObject::InsertComponent(unique_ptr<Component> component) {
 	component->SetGameObject(this);
-	m_components.insert(move(component));
+	m_components.push_back(move(component));
 }
 
 void GameObject::EraseComponent(Component* component) {
@@ -63,7 +63,7 @@ void GameObject::EraseComponent(Component* component) {
 
 	for (const unique_ptr<Component>& comp : m_components) {
 		if (comp.get() == component) {
-			m_components.erase(comp);
+			m_components.remove(comp);
 			break;
 		}
 	}

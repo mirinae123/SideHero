@@ -12,7 +12,7 @@ string Scene::GetSceneName() {
 	return m_sceneName;
 }
 
-set<unique_ptr<GameObject>>& Scene::GetGameObjects() {
+list<unique_ptr<GameObject>>& Scene::GetGameObjects() {
 	return m_gameObjects;
 }
 
@@ -20,11 +20,11 @@ void Scene::InsertGameObject(unique_ptr<GameObject> gameObject) {
 	if (m_isInitialized && gameObject->GetActive()) {
 		gameObject->Start();
 	}
-	m_gameObjects.insert(move(gameObject));
+	m_gameObjects.push_back(move(gameObject));
 }
 
 void Scene::EraseGameObject(unique_ptr<GameObject> gameObject) {
-	m_gameObjects.erase(gameObject);
+	m_gameObjects.remove(gameObject);
 }
 
 void Scene::Initialize() {
@@ -48,7 +48,7 @@ void Scene::Frame() {
 		}
 	}
 
-	// Á¦°Å ÇÃ·¡±×°¡ ÁöÁ¤µÈ °ÔÀÓ ¿ÀºêÁ§Æ®¸¦ Á¦°ÅÇÑ´Ù.
+	// ì œê±° í”Œë˜ê·¸ê°€ ì§€ì •ëœ ê²Œì„ ì˜¤ë¸Œì íŠ¸ë¥¼ ì œê±°í•œë‹¤.
 	auto it = m_gameObjects.begin();
 
 	while (it != m_gameObjects.end()) {

@@ -1,7 +1,7 @@
 #pragma once
 
 #include <memory>
-#include <set>
+#include <list>
 #include <string>
 
 #include "gameobject.h"
@@ -9,7 +9,7 @@
 using namespace std;
 
 /// <summary>
-/// ¾À Å¬·¡½º
+/// ì”¬ í´ë˜ìŠ¤
 /// </summary>
 class Scene : public enable_shared_from_this<Scene> {
 public:
@@ -20,21 +20,21 @@ public:
 	string GetSceneName();
 
 	/// <summary>
-	/// ¾À¿¡ Á¸ÀçÇÏ´Â °ÔÀÓ ¿ÀºêÁ§Æ®µéÀ» ¹İÈ¯ÇÑ´Ù.
+	/// ì”¬ì— ì¡´ì¬í•˜ëŠ” ê²Œì„ ì˜¤ë¸Œì íŠ¸ë“¤ì„ ë°˜í™˜í•œë‹¤.
 	/// </summary>
-	/// <returns>°ÔÀÓ ¿ÀºêÁ§Æ® Set</returns>
-	set<unique_ptr<GameObject>>& GetGameObjects();
+	/// <returns>ê²Œì„ ì˜¤ë¸Œì íŠ¸ Set</returns>
+	list<unique_ptr<GameObject>>& GetGameObjects();
 
 	/// <summary>
-	/// ¾À¿¡ °ÔÀÓ ¿ÀºêÁ§Æ®¸¦ Ãß°¡ÇÑ´Ù.
+	/// ì”¬ì— ê²Œì„ ì˜¤ë¸Œì íŠ¸ë¥¼ ì¶”ê°€í•œë‹¤.
 	/// </summary>
-	/// <param name="">°ÔÀÓ ¿ÀºêÁ§Æ®¿¡ ´ëÇÑ Unique Pointer</param>
+	/// <param name="">ê²Œì„ ì˜¤ë¸Œì íŠ¸ì— ëŒ€í•œ Unique Pointer</param>
 	void InsertGameObject(unique_ptr<GameObject>);
 
 	/// <summary>
-	/// ¾À¿¡¼­ °ÔÀÓ ¿ÀºêÁ§Æ®¸¦ Á¦°ÅÇÑ´Ù.
+	/// ì”¬ì—ì„œ ê²Œì„ ì˜¤ë¸Œì íŠ¸ë¥¼ ì œê±°í•œë‹¤.
 	/// </summary>
-	/// <param name="">°ÔÀÓ ¿ÀºêÁ§Æ®¿¡ ´ëÇÑ Unique Pointer</param>
+	/// <param name="">ê²Œì„ ì˜¤ë¸Œì íŠ¸ì— ëŒ€í•œ Unique Pointer</param>
 	void EraseGameObject(unique_ptr<GameObject>);
 
 	virtual void Initialize();
@@ -47,7 +47,7 @@ protected:
 
 protected:
 	string m_sceneName;
-	set<unique_ptr<GameObject>> m_gameObjects;
+	list<unique_ptr<GameObject>> m_gameObjects;
 
 	bool m_isInitialized = false;
 
